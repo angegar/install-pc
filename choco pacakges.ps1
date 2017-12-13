@@ -17,7 +17,7 @@ choco install -y docker-for-windows
 
 # Office tools
 choco install -y office365-2016-deployment-tool
-choco install -y skypeforbusiness
+#choco install -y skypeforbusiness
 choco install -y slack
 choco install -y adobereader
 
