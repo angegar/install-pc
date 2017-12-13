@@ -24,5 +24,16 @@ choco install -y googlechrome
 choco install -y dropbox
 choco install -y passwordsafe
 
+# Install only the PowerShell module
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
+ 
+# Install the Hyper-V management tool pack (Hyper-V Manager and the Hyper-V PowerShell module)
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Tools-All
+ 
+# Install the entire Hyper-V stack (hypervisor, services, and tools)
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 # Install Linux Sub Sytem
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile ~/Ubuntu.zip -UseBasicParsing
+Expand-Archive ~/Ubuntu.zip ~/Ubuntu
+ubuntu.exe
