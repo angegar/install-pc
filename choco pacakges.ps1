@@ -1,6 +1,9 @@
 # Enable developer mode on win10
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
 
+# Install the entire Hyper-V stack (hypervisor, services, and tools)
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+
 # Install chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco upgrade chocolatey
@@ -12,6 +15,8 @@ choco install -y postman
 choco install -y jdk8
 choco install -y terraform
 choco install -y nodejs
+choco install -y driverbooster
+choco install -y hp-universal-print-driver-pcl
 choco install -y docker-for-windows
 
 
@@ -28,13 +33,8 @@ choco install -y dropbox
 choco install -y passwordsafe
 
 # Install only the PowerShell module
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
- 
-# Install the Hyper-V management tool pack (Hyper-V Manager and the Hyper-V PowerShell module)
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Tools-All
- 
-# Install the entire Hyper-V stack (hypervisor, services, and tools)
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+#Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
+
 # Install Linux Sub Sytem
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 lxrun /install /y
