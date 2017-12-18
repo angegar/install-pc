@@ -31,6 +31,7 @@ choco install -y notepadplusplus
 choco install -y googlechrome
 choco install -y dropbox
 choco install -y passwordsafe
+choco install -y displaylink
 
 # Install only the PowerShell module
 #Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
