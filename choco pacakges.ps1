@@ -25,6 +25,7 @@ choco install -y office365-2016-deployment-tool
 #choco install -y skypeforbusiness
 choco install -y slack
 choco install -y adobereader
+choco install -y vlc
 
 # Utilitary
 choco install -y notepadplusplus
