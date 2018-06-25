@@ -35,6 +35,7 @@ choco install -y dropbox
 choco install -y passwordsafe
 choco install -y displaylink
 choco install -y directx
+choco install -y k-litecodecpackfull
 
 # Install only the PowerShell module
 #Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
