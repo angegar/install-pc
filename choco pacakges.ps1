@@ -36,6 +36,7 @@ choco install -y passwordsafe
 choco install -y displaylink
 choco install -y directx
 choco install -y k-litecodecpackfull
+choco install -y sweet-home-3d
 
 # Install only the PowerShell module
 #Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
