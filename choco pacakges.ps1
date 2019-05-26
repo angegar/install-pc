@@ -18,6 +18,8 @@ choco install -y nodejs
 choco install -y driverbooster
 choco install -y hp-universal-print-driver-pcl
 choco install -y docker-for-windows
+choco instalk -y xming
+choco instalk -y plexmediaserver
 
 
 # Office tools
